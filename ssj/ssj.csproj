@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0847A75C-78BD-4572-AF8E-985970C7708B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ssj</RootNamespace>
+    <AssemblyName>ssj</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calc\CalcEjePar.cs" />
+    <Compile Include="Calc\CalcMixPar.cs" />
+    <Compile Include="DataShare.cs" />
+    <Compile Include="DBOperation.cs" />
+    <Compile Include="DetJetCoe.cs" />
+    <Compile Include="JetCoe.cs" />
+    <Compile Include="EjePar.cs" />
+    <Compile Include="frmDetJetCoe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetJetCoe.Designer.cs">
+      <DependentUpon>frmDetJetCoe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJetCoe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJetCoe.Designer.cs">
+      <DependentUpon>frmJetCoe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEjePar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEjePar.Designer.cs">
+      <DependentUpon>frmEjePar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calc\CalcWorkPar.cs" />
+    <Compile Include="frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMixPar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMixPar.Designer.cs">
+      <DependentUpon>frmMixPar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSize.Designer.cs">
+      <DependentUpon>frmSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MixPar.cs" />
+    <Compile Include="Model\Parameters.cs" />
+    <Compile Include="Model\Material.cs" />
+    <Compile Include="Size.cs" />
+    <Compile Include="SysPar.cs" />
+    <Compile Include="frmSysPar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysPar.Designer.cs">
+      <DependentUpon>frmSysPar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmWorkPar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkPar.Designer.cs">
+      <DependentUpon>frmWorkPar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPar.cs" />
+    <EmbeddedResource Include="frmDetJetCoe.resx">
+      <DependentUpon>frmDetJetCoe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJetCoe.resx">
+      <DependentUpon>frmJetCoe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEjePar.resx">
+      <DependentUpon>frmEjePar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMixPar.resx">
+      <DependentUpon>frmMixPar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSize.resx">
+      <DependentUpon>frmSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysPar.resx">
+      <DependentUpon>frmSysPar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmWorkPar.resx">
+      <DependentUpon>frmWorkPar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="License-LGPL.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
